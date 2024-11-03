@@ -39,7 +39,7 @@ class WeatherApp {
     }
 }
 class WeatherService extends WeatherApp {
-    
+
     async fetchWeather() {
         const apiKey = this.apiKeyInput.value;
         const city = this.cityInput.value;
@@ -55,4 +55,26 @@ class WeatherService extends WeatherApp {
         }
     }
 
+ async fetchWeatherByLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const { latitude, longitude } = position.coords;
+                const apiKey = this.apiKeyInput.value; // Retrieve the API key here
+                const data = await this.getWeatherDataByCoordinates(latitude, longitude, apiKey);
+                if (data) {
+                    this.displayWeather(data);
+                    this.cityInput.value = '';
+                } else {
+                    alert('Unable to retrieve weather data for your location.');
+                }
+            },
+            () => {
+                alert('Unable to retrieve your location. Please allow location access.');
+            }
+        );
+    } else {
+        alert('Geolocation is not supported by this browser.');
+    }
+}
 }
