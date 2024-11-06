@@ -20,7 +20,19 @@
     {
         "Applet_No": "Applet 4 - Dynamic Elements",
         "Description": "This contains for searching",
-        "file": "Applet-4/Applet-4.html",
+        "file": "Applet-4.html",
         "Image": "https://img.pikbest.com/wp/202405/dotted-line-dynamics-dynamic-form-of-dots-and-lines-abstract-technology-background-with-science-big-data-elements_9827348.jpg!w700wp"
+    },
+    {
+        "Applet_No": "Applet 5 - Open Weather",
+        "Description": "This contains for searching",
+        "file": "Applet-5.html",
+        "Image": "https://w7.pngwing.com/pngs/981/554/png-transparent-weather-forecasting-rain-weather-winter-text-weather-forecasting-thumbnail.png"
+    },
+    {
+        "Applet_No": "Applet 6 -TodoList",
+        "Description": "This contains for searching",
+        "file": "Applet-6.html",
+        "Image": "https://base.vn/wp-content/uploads/2024/08/to-do-list.webp"
     }
 ]
